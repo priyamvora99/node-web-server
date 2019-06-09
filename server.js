@@ -48,6 +48,14 @@ app.get("/about",(req,res)=>{
     pageTitle:'About Page'
   });
 });
+
+app.get("/project",(req,res)=>{
+  res.render("project.hbs",{
+    pageTitle:'Project Page',
+    welcomeMessage:'Here goes portfolio'
+  });
+});
+
 app.get("/bad.html",(req,res)=>{
   res.send({
     error:"File not found!"
